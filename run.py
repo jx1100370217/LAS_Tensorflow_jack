@@ -129,13 +129,13 @@ def infer():
 
 if __name__ == '__main__':
     ## step1:数据预处理
-    # process_data()
+    process_data()
     ## step2:生成TF_Record数据(train.tfrecord,test.tfrecord)
-    # npy2tfrecord(TRAIN_FEATURE, TRAIN_LABEL, TRAIN_TF)
-    # npy2tfrecord(TEST_FEATURE, TEST_LABEL, TEST_TF)
+    npy2tfrecord(TRAIN_FEATURE, TRAIN_LABEL, TRAIN_TF)
+    npy2tfrecord(TEST_FEATURE, TEST_LABEL, TEST_TF)
     ## step3:构建词表
-    # build_vocab(TRAIN_LABEL, VOCAB_TABLE)
+    build_vocab(TRAIN_LABEL, VOCAB_TABLE)
     ## step4:模型训练
-    # train()
+    train()
     ## step5:模型评估
     infer()
